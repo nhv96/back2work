@@ -1,0 +1,12 @@
+body {
+    width: 220px;
+    height: 100px;
+}
+
+h1{
+    background-color: yellow;
+}
+
+ul > li {
+    padding: 5px 0px 5px 0px;
+}
