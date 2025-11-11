@@ -1,4 +1,4 @@
-chrome.webNavigation.onBeforeNavigate.addListener(async (details) => {
+chrome.webNavigation.onCommitted.addListener(async (details) => {
     let s = await chrome.storage.local.get(["b2w_state"]);
     if (s.b2w_state == undefined) {
         return;
@@ -16,5 +16,14 @@ chrome.webNavigation.onBeforeNavigate.addListener(async (details) => {
 
     if (blocked_list.indexOf(details.url) != -1) {
         chrome.tabs.update({url:"https://hv.instructure.com"});
+
+        chrome.notifications.create({
+            type: 'basic',
+            iconUrl: '../images/trashpanda.JPG',
+            title: 'Focus!!!',
+            message: "Get back to work!",
+            buttons: [{ title: 'Okey...' }],
+            priority: 0
+        })
     }
 });

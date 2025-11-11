@@ -5,9 +5,9 @@
   "manifest_version": 3,
   "action": {
     "default_popup": "popup/main.html",
-    "default_icon": "gopher.png"
+    "default_icon": "images/gopher.png"
   },
-  "permissions": ["storage", "tabs", "webNavigation"],
+  "permissions": ["storage", "tabs", "webNavigation", "notifications"],
   "background": {
     "service_worker": "scripts/background.js"
   }
