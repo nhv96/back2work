@@ -1,3 +1,6 @@
+const txtEnable = "Enable";
+const txtDisable = "Disable";
+
 async function getCurrentTab() {
     let queryOptions = { active: true, lastFocusedWindow: true };
     // `tab` will either be a `tabs.Tab` instance or `undefined`.
@@ -79,29 +82,32 @@ act_btn.addEventListener('click', async () => {
     let v = await chrome.storage.local.get(["b2w_state"]);
     if (v.b2w_state == undefined) {
         chrome.storage.local.set({"b2w_state": true});
-        act_btn.textContent = "disable";
+        act_btn.textContent = txtDisable;
+        console.log('1')
         return;
     }
 
     if (v.b2w_state == true) {
         chrome.storage.local.set({"b2w_state": false});
-        act_btn.textContent = "enable";
+        act_btn.textContent = txtEnable;
+        console.log('2')
     } else {
         chrome.storage.local.set({"b2w_state": true});
-        act_btn.textContent = "disable";
+        act_btn.textContent = txtDisable;
+        console.log('3')
     }
 });
 
 (async () => {
     populateList();
 
-    let v = await chrome.storage.local.get(["b2w_state"]);
+    let v = await chrome.storage.local.get([b2wState]);
     if (v.b2w_state != undefined) {
         let act_btn = document.getElementById("act_btn");
         if (v.b2w_state == true) {
-            act_btn.textContent = "disable"
+            act_btn.textContent = txtDisable
         } else {
-            act_btn.textContent = "enable"
+            act_btn.textContent = txtEnable
         }
     }
 })();

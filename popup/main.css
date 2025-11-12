@@ -1,12 +1,116 @@
 body {
     width: 220px;
-    height: 100px;
+    height: auto;
+    padding: 2px;
 }
 
 h1{
     background-color: yellow;
 }
 
-ul > li {
-    padding: 5px 0px 5px 0px;
+.m {
+    margin:0px 0px 5px 0px;
 }
+
+ul{
+    /* background-color: grey; */
+    list-style: none;
+    padding-left:2px;
+}
+
+ul > li {
+    border-radius: 3px;
+    background-color: rgb(209, 209, 209);
+    padding: 3px 0px 3px 5px;
+    margin: 2px 0px 2px 0px;
+}
+
+.green {
+    background-color: #2ea44f;
+}
+
+.green:hover {
+    background-color: #2c974b;
+}
+
+.green:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+}
+
+.red {
+    background-color: #b83a3a;
+}
+
+.red:hover {
+    background-color: #972e2c;
+}
+
+.red:focus {
+    box-shadow: rgba(164, 68, 46, 0.4) 0 0 0 3px;
+    outline: none;
+}
+
+.grey {
+    background-color: #928f8f;
+}
+
+.grey:hover {
+    background-color: #464545;
+}
+
+.grey:focus {
+    box-shadow: rgba(51, 50, 50, 0.4) 0 0 0 3px;
+    outline: none;
+}
+
+.button-3 {
+  appearance: none;
+  /* background-color: #2ea44f; */
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 3px 8px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+/* .button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+} */
+
+/* .button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+} */
