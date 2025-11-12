@@ -83,25 +83,22 @@ act_btn.addEventListener('click', async () => {
     if (v.b2w_state == undefined) {
         chrome.storage.local.set({"b2w_state": true});
         act_btn.textContent = txtDisable;
-        console.log('1')
         return;
     }
 
     if (v.b2w_state == true) {
         chrome.storage.local.set({"b2w_state": false});
         act_btn.textContent = txtEnable;
-        console.log('2')
     } else {
         chrome.storage.local.set({"b2w_state": true});
         act_btn.textContent = txtDisable;
-        console.log('3')
     }
 });
 
 (async () => {
     populateList();
 
-    let v = await chrome.storage.local.get([b2wState]);
+    let v = await chrome.storage.local.get(["b2w_state"]);
     if (v.b2w_state != undefined) {
         let act_btn = document.getElementById("act_btn");
         if (v.b2w_state == true) {

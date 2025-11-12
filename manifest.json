@@ -1,6 +1,6 @@
 {
   "name": "Back2Work",
-  "description": "Base Level Extension",
+  "description": "Extension to redirect you to a website when you access some blocked websites.",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
